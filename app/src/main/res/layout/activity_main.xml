@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:id="@+id/back_ground"
+    android:background="@drawable/gradient"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/face_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="12dp"
+        android:text="Arthur Morgan"
+        android:textColor="@color/black"
+        android:id="@+id/text_name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/back_ground"
+        tools:ignore="TextSizeCheck"/>
+    <TextView
+        android:id="@+id/ad_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Developer"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/text_name"
+        app:layout_constraintRight_toRightOf="@+id/text_name"
+        app:layout_constraintLeft_toLeftOf="@+id/text_name"/>
+
+    <TextView
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:text="arthurmorgan@gmail.com"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_email" />
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:text="+380984612421"
+        app:layout_constraintRight_toRightOf="@+id/btn_phone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_phone" />
+
+    <TextView
+        android:id="@+id/greeting_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Greetings! I am an enthusiastic Android developer with a deep love for crafting clean and efficient code. My journey in the world of mobile app development began 5 years ago, and since then, I have been dedicated to creating seamless and user-friendly experiences on the Android platform."
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:layout_marginTop="40dp"
+        android:textSize="17sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="Phone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_email"
+        app:layout_constraintRight_toLeftOf="@+id/btn_phone"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_phone"
+        android:layout_marginRight="12dp"
+        android:text="Email"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
